@@ -76,6 +76,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     // MARK: DIDMOVETOVIEW
     override func didMoveToView(view: SKView) {
+        
+        //MARK: STAR ANIMATION
+        starfield = SKEmitterNode(fileNamed: "Starfield")!
+        starfield.position = CGPoint(x: 2048, y: 784)
+        starfield.xScale = 2
+        starfield.yScale = 2
+        starfield.zPosition = -100
+        starfield.advanceSimulationTime(25)
+        addChild(starfield)
+        
     }
     
 }
